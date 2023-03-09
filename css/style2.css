@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.board-header {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.board-header>.add>img {
+    width: 50px;
+}
+
+.add {
+    border: none;
+    background: none;
+}
+
+.add:hover {
+    cursor: pointer;
+}
+
+.board-header>.information {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.oneOfNote {
+    position: absolute;
+    background-color: white;
+    border: 3px solid black;
+    width: 100px;
+    height: 100px;
+    min-width: 75px;
+    min-height: 75px;
+    z-index: 3;
+    overflow: auto;
+    resize: both;
+}
+
+.oneOfNote:hover {
+    cursor: grab;
+}
+
+.oneOfNote:active {
+    cursor: grabbing;
+    background-color: aliceblue;
+}
+
+.deleteNote {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    position: inherit;
+    right: 0;
+    color: white;
+    font-weight: 1000;
+    text-align: center;
+}
+
+.editNote {
+    background-color: darkgoldenrod;
+    width: 20px;
+    height: 20px;
+    position: inherit;
+    left: 0;
+    color: white;
+    font-weight: 1000;
+    text-align: center;
+}
+
+.oneOfNote>div {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    padding-top: 30px;
+    position: inherit;
+}
+
+.deleteNote:hover,
+.editNote:hover,
+#save:hover,
+#cancer:hover {
+    cursor: pointer;
+}
+
+span {
+    user-select: none;
+}
+
+#editor-div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+    width: 40%;
+    height: 400px;
+    z-index: 10000;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+#save {
+    position: relative;
+    color: white;
+    background-color: green;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+#cancer {
+    position: relative;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    color: white;
+    background-color: red;
+}
+
+.tox-statusbar__text-container,
+.tox-statusbar {
+    display: none !important;
+}

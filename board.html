@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+    <link rel="icon" type="image/x-icon" href="/img/happy-fridge.png">
+    <link rel="stylesheet" href="css/style2.css">
+    <script src="dist/main.js"></script>
+    <script src="dist/Note.bundle.js" defer></script>
+    <script src="dist/Lodowka.bundle.js" defer></script>
+    <script src="dist/script.bundle.js" defer></script>
+    <script src="https://cdn.tiny.cloud/1/s50o1drzeq136sblv5lon7ji7r5esiq2o5ycwl1kwwypxa91/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script defer>
+        tinymce.init({
+            selector: "#editor",
+            // width: 400,
+            // height: 300,
+            // min_width: 200,
+            min_height: 300
+                //plugins: 'save',
+                //toolbar: 'save',
+                /*save_onsavecallback: function() {
+                 = tinymce.activeEditor.getContent()
+                }*/
+        });
+    </script>
+    <title>Lodówka</title>
+</head>
+
+<body>
+    <div class="board-header">
+        <button class="add"><img src="img/add.png" alt="add-icon"></button>
+        <div class="information">
+            <p class="all-time-info">Notes at all: <span id="notes-all">0</span></p>
+            <p class="now-info">Notes now: <span id="notes-now">0</span></p>
+        </div>
+    </div>
+
+    <div id="board-main">
+        <div id="overlay">
+            <div id="editor-div">
+                <textarea id="editor"></textarea>
+                <div class="buttons">
+                    <div id="save">S</div>
+                    <div id="cancer">X</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
